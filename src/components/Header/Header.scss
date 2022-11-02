@@ -1,0 +1,14 @@
+.header {
+  padding: 20px 0;
+  box-shadow: 0 -16px 22px 16px rgba($color: #000000, $alpha: 0.6);
+
+  &__brand {
+    font-size: 32px;
+    font-weight: 700;
+    color: #bbdbff;
+
+    &:active {
+      color: #bbdbff;
+    }
+  }
+}
