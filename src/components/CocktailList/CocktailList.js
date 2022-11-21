@@ -9,17 +9,23 @@ const CocktailList = () => {
   const [modifiedCocktail, setModifiedCocktail] = useState([]);
   const dispatch = useDispatch();
 
-  console.log('cocktails', cocktails);
-
   useEffect(() => {
     dispatch(fetchCocktails());
   }, []);
+
+  // useEffect(() => {
+  //   if (cocktails) {
+  //     const newCocktails = cocktails.map()
+  //   }
+  // },[cocktails])
 
   return (
     <section className='cocktail-list'>
       <div className='container'>
         <div className='box'>
-          <CocktailCard />
+          {cocktails?.map((cocktail) => (
+            <CocktailCard key={cocktail.idDrink} cocktail={cocktail} />
+          ))}
         </div>
       </div>
     </section>
