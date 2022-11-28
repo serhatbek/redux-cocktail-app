@@ -17,7 +17,7 @@ const CocktailCard = ({
         <h3>{name}</h3>
         <h4>{glass}</h4>
         <p>{info}</p>
-        <Link className='btn' to={`redux-cocktail-app/cocktail/${id}`}>
+        <Link className='btn' to={`./cocktail/${id}`}>
           Details
         </Link>
       </div>
