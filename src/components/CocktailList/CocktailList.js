@@ -7,18 +7,37 @@ import './CocktailList.scss';
 
 const CocktailList = () => {
   const { cocktails, loading } = useSelector((state) => ({ ...state.app }));
-  const [modifiedCocktail, setModifiedCocktail] = useState([]);
+  // const [modifiedCocktail, setModifiedCocktail] = useState([]);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchCocktails());
   }, []);
 
-  // useEffect(() => {
-  //   if (cocktails) {
-  //     const newCocktails = cocktails.map()
-  //   }
-  // },[cocktails])
+  if (!cocktails) {
+    return (
+      <section className='cocktail-list'>
+        <div className='container'>
+          <h2>Sorry, no cocktail was found</h2>
+        </div>
+      </section>
+    );
+  }
+
+  if (loading) {
+    return (
+      <section className='cocktail-list'>
+        <div className={loading ? 'container container--full' : 'container'}>
+          <div className='lds-ring'>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className='cocktail-list'>
