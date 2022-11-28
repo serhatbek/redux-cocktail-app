@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useState, useEffect } from 'react';
 import { fetchCocktails } from '../../store/features/cocktailSlice';
 import { Link } from 'react-router-dom';
+import './CocktailList.scss';
 
 const CocktailList = () => {
   const { cocktails, loading } = useSelector((state) => ({ ...state.app }));
@@ -22,6 +23,7 @@ const CocktailList = () => {
   return (
     <section className='cocktail-list'>
       <div className='container'>
+        <h2>Cocktails</h2>
         <div className='box'>
           {cocktails?.map((cocktail) => {
             const { idDrink: id } = cocktail;

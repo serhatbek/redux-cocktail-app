@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import './CocktailCard.scss';
 
 const CocktailCard = ({
   idDrink: id,
@@ -16,7 +17,9 @@ const CocktailCard = ({
         <h3>{name}</h3>
         <h4>{glass}</h4>
         <p>{info}</p>
-        <Link to={`redux-cocktail-app/cocktail/${id}`}>Details</Link>
+        <Link className='btn' to={`redux-cocktail-app/cocktail/${id}`}>
+          Details
+        </Link>
       </div>
     </div>
   );

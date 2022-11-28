@@ -1,0 +1,52 @@
+.cocktail {
+  max-width: 270px;
+  background: #fff;
+  margin-bottom: 2rem;
+  box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s linear;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  @media (max-width: 637px) {
+    max-width: 100%;
+  }
+
+  &:hover {
+    box-shadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  }
+
+  &__img {
+    img {
+      display: block;
+      height: 270px;
+    }
+  }
+
+  &__info {
+    padding: 1.5rem;
+
+    h3,
+    h4,
+    p {
+      margin-bottom: 5px;
+    }
+
+    h3 {
+      font-size: 32px;
+    }
+
+    h4 {
+      letter-spacing: 3px;
+      font-size: 18px;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+  }
+}
