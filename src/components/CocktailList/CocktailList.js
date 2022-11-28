@@ -23,9 +23,11 @@ const CocktailList = () => {
     <section className='cocktail-list'>
       <div className='container'>
         <div className='box'>
-          {cocktails?.map((cocktail) => (
-            <CocktailCard key={cocktail.idDrink} cocktail={cocktail} />
-          ))}
+          {cocktails?.map((cocktail) => {
+            const { idDrink: id } = cocktail;
+
+            return <CocktailCard key={id} {...cocktail} />;
+          })}
         </div>
       </div>
     </section>
