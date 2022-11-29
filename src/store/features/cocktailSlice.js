@@ -21,7 +21,6 @@ export const fetchSelectedCocktail = createAsyncThunk(
   async (id) => {
     const response = await axios.get(`${urlSingleSelected}${id}`);
     const data = await response.data;
-
     return data;
   }
 );
@@ -29,7 +28,6 @@ export const fetchSelectedCocktail = createAsyncThunk(
 const initialState = {
   cocktails: [],
   selectedCocktail: {},
-  cocktail: [],
   loading: false,
   error: null,
 };

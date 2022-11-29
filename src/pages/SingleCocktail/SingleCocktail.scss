@@ -1,2 +1,69 @@
 .single-cocktail {
+  height: 90vh;
+  text-align: center;
+  padding: 80px 0;
+
+  @media (max-width: 840px) {
+    height: 100%;
+  }
+
+  h2 {
+    margin: 16px 0 50px 0;
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 32px;
+    letter-spacing: 4px;
+
+    @media (max-width: 840px) {
+      font-size: 26px;
+      margin-bottom: 30px;
+    }
+  }
+
+  figure {
+    max-width: 400px;
+    width: 100%;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__card {
+    display: flex;
+    gap: 20px;
+
+    @media (max-width: 840px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__info {
+      text-align: left;
+      align-self: baseline;
+      padding-top: 15px;
+
+      p {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.8;
+        margin-bottom: 20px;
+
+        @media (max-width: 840px) {
+          font-size: 14px;
+        }
+
+        span {
+          &:first-child {
+            margin-right: 10px;
+            background: #d4e6a5;
+            border-radius: 4px;
+            padding: 4px;
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+  }
 }
