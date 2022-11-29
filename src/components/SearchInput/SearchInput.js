@@ -14,7 +14,6 @@ function SearchInput() {
   const handleChange = () => {
     const searchTerm = searchValue.current.value;
     dispatch(fetchSearchCocktail({ searchTerm }));
-    console.log(searchTerm);
   };
 
   return (
