@@ -27,7 +27,7 @@ const CocktailList = () => {
     );
   }
 
-  if (cocktails.length <= 0) {
+  if (!cocktails) {
     return (
       <section className='cocktail-list'>
         <div className='container'>

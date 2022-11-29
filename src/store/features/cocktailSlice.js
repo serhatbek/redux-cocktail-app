@@ -25,6 +25,15 @@ export const fetchSelectedCocktail = createAsyncThunk(
   }
 );
 
+export const fetchSearchCocktail = createAsyncThunk(
+  'cocktails/fetchSearchCocktail',
+  async ({ searchTerm }) => {
+    const response = await axios.get(`${urlAllCocktails}${searchTerm}`);
+    const data = await response.data;
+    return data;
+  }
+);
+
 const initialState = {
   cocktails: [],
   selectedCocktail: {},
@@ -55,6 +64,17 @@ const cocktailSlice = createSlice({
       state.selectedCocktail = payload.drinks[0];
     },
     [fetchSelectedCocktail.rejected]: (state, { payload }) => {
+      state.loading = false;
+      state.error = payload;
+    },
+    [fetchSearchCocktail.pending]: (state, action) => {
+      state.loading = true;
+    },
+    [fetchSearchCocktail.fulfilled]: (state, { payload }) => {
+      state.loading = false;
+      state.cocktails = payload.drinks;
+    },
+    [fetchSearchCocktail.rejected]: (state, { payload }) => {
       state.loading = false;
       state.error = payload;
     },

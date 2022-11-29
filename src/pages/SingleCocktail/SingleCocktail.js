@@ -92,7 +92,7 @@ const SingleCocktail = () => {
             </p>
             <p>
               <span className='single-cocktail__card__title'>
-                instructions :{' '}
+                instructions :
               </span>
               {instructions}
             </p>
