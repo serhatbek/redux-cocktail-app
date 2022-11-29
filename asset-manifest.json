@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/redux-cocktail-app/static/css/main.30759d11.css",
+    "main.js": "/redux-cocktail-app/static/js/main.6a32afaf.js",
+    "index.html": "/redux-cocktail-app/index.html",
+    "main.30759d11.css.map": "/redux-cocktail-app/static/css/main.30759d11.css.map",
+    "main.6a32afaf.js.map": "/redux-cocktail-app/static/js/main.6a32afaf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.30759d11.css",
+    "static/js/main.6a32afaf.js"
+  ]
+}
